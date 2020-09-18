@@ -1,3 +1,5 @@
+package petStore;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -14,23 +16,23 @@ public class TestPetStore {
         String filePath = "C:\\Users\\kaca\\Desktop\\PetStoreUsers.xlsx";
 
 
-        AccountRegistrationForm.setUserID(driver,ExcelDataReader.readDataFromExcel(filePath,0,1));
-        AccountRegistrationForm.setNewPassword(driver,ExcelDataReader.readDataFromExcel(filePath,1,1));
-        AccountRegistrationForm.setRepeatPassword(driver,ExcelDataReader.readDataFromExcel(filePath,2,1));
+        AccountRegistrationForm.setUserID(driver,ExcelDataReaderWriter.readDataFromExcel(filePath,0,1));
+        AccountRegistrationForm.setNewPassword(driver,ExcelDataReaderWriter.readDataFromExcel(filePath,1,1));
+        AccountRegistrationForm.setRepeatPassword(driver,ExcelDataReaderWriter.readDataFromExcel(filePath,2,1));
 
-        AccountRegistrationForm.setFirstName(driver,ExcelDataReader.readDataFromExcel(filePath,3,1));
-        AccountRegistrationForm.setLastName(driver,ExcelDataReader.readDataFromExcel(filePath,4,1));
-        AccountRegistrationForm.setEmail(driver,ExcelDataReader.readDataFromExcel(filePath,5,1));
-        AccountRegistrationForm.setPhone(driver,ExcelDataReader.readDataFromExcel(filePath,6,1));
-        AccountRegistrationForm.setAddress1(driver,ExcelDataReader.readDataFromExcel(filePath,7,1));
-        AccountRegistrationForm.setAddress2(driver,ExcelDataReader.readDataFromExcel(filePath,8,1));
-        AccountRegistrationForm.setCity(driver,ExcelDataReader.readDataFromExcel(filePath,9,1));
-        AccountRegistrationForm.setState(driver,ExcelDataReader.readDataFromExcel(filePath,10,1));
-        AccountRegistrationForm.setZip(driver,ExcelDataReader.readDataFromExcel(filePath,11,1));
-        AccountRegistrationForm.setCountry(driver,ExcelDataReader.readDataFromExcel(filePath,12,1));
+        AccountRegistrationForm.setFirstName(driver,ExcelDataReaderWriter.readDataFromExcel(filePath,3,1));
+        AccountRegistrationForm.setLastName(driver,ExcelDataReaderWriter.readDataFromExcel(filePath,4,1));
+        AccountRegistrationForm.setEmail(driver,ExcelDataReaderWriter.readDataFromExcel(filePath,5,1));
+        AccountRegistrationForm.setPhone(driver,ExcelDataReaderWriter.readDataFromExcel(filePath,6,1));
+        AccountRegistrationForm.setAddress1(driver,ExcelDataReaderWriter.readDataFromExcel(filePath,7,1));
+        AccountRegistrationForm.setAddress2(driver,ExcelDataReaderWriter.readDataFromExcel(filePath,8,1));
+        AccountRegistrationForm.setCity(driver,ExcelDataReaderWriter.readDataFromExcel(filePath,9,1));
+        AccountRegistrationForm.setState(driver,ExcelDataReaderWriter.readDataFromExcel(filePath,10,1));
+        AccountRegistrationForm.setZip(driver,ExcelDataReaderWriter.readDataFromExcel(filePath,11,1));
+        AccountRegistrationForm.setCountry(driver,ExcelDataReaderWriter.readDataFromExcel(filePath,12,1));
 
-        AccountRegistrationForm.setLanguagePreference(driver,ExcelDataReader.readDataFromExcel(filePath,13,1));
-        AccountRegistrationForm.setFavouriteCategory(driver,ExcelDataReader.readDataFromExcel(filePath,14,1).toUpperCase());
+        AccountRegistrationForm.setLanguagePreference(driver,ExcelDataReaderWriter.readDataFromExcel(filePath,13,1));
+        AccountRegistrationForm.setFavouriteCategory(driver,ExcelDataReaderWriter.readDataFromExcel(filePath,14,1).toUpperCase());
         AccountRegistrationForm.setEnableMyList(driver);
         AccountRegistrationForm.setEnableMyBanner(driver);
         AccountRegistrationForm.clickSaveAccountInformation(driver);
@@ -41,8 +43,8 @@ public class TestPetStore {
         driver.get(Home.url);
         Home.clickEnterTheStore(driver);
         Catalog.signInClicl(driver);
-        CheckSavedAccount.setUserName(driver,ExcelDataReader.readDataFromExcel(filePath,0,1));
-        CheckSavedAccount.setPassword(driver,ExcelDataReader.readDataFromExcel(filePath,1,1));
+        CheckSavedAccount.setUserName(driver,ExcelDataReaderWriter.readDataFromExcel(filePath,0,1));
+        CheckSavedAccount.setPassword(driver,ExcelDataReaderWriter.readDataFromExcel(filePath,1,1));
         CheckSavedAccount.clickLogIn(driver);
         Thread.sleep(1000);
         driver.close();
@@ -88,8 +90,8 @@ public class TestPetStore {
         Thread.sleep(1000);
         driver.close();
 
-      ExcelDataReader.setCellValueString(filePath,1,2,"Milena");
-      System.out.println(ExcelDataReader.readDataFromExcel(filePath,1,2));
+      ExcelDataReaderWriter.setCellValueString(filePath,1,2,"Milena");
+      System.out.println(ExcelDataReaderWriter.readDataFromExcel(filePath,1,2));
 
 
     }
