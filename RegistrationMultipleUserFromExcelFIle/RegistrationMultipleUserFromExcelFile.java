@@ -43,13 +43,18 @@ public class RegistrationMultipleUserFromExcelFile {
                 WebElement email = driver.findElement(By.id("userEmail"));
                 email.sendKeys(cell.toString());
 
-                cell = row.getCell(3);
+
+				cell = row.getCell(3);
+                WebElement gender = driver.findElement(By.xpath("//label[contains(text(),'"+cell.toString()+"')]"));
+                gender.click();
+
+              /*  cell = row.getCell(3);
                 if (row.getCell(3).getStringCellValue().contains("f") ){
                          WebElement femail = driver.findElement(By.xpath("//label[contains(text(),'Female')]"));
                          femail.click(); }
                 else{ WebElement male = driver.findElement
                         (By.xpath("//label[contains(text(),'Male')]"));
-                        male.click(); }
+                        male.click(); }*/
 
 
                 cell = row.getCell(4);
