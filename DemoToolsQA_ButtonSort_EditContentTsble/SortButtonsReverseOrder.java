@@ -11,7 +11,7 @@ public class SortButtonsReverseOrder {
     public static void main(String[] args) throws InterruptedException {
 
         String interactionsPath = "/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[5]/div[1]/div[3]";
-        String chromeDriverpath = "C:\\Users\\srdjan\\Desktop\\JAR Files\\Selenium za IDE\\chromedriver.exe";
+        String chromeDriverpath = "C:\\Users\\kaca\\Desktop\\JAR Files\\Selenium za IDE\\chromedriver.exe";
         String sortablePath = "/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[5]/div[1]/ul[1]/li[1]";
         String url = "https://demoqa.com/";
         String oneButtonPath = "/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]";
